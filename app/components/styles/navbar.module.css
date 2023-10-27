@@ -1,0 +1,146 @@
+#navbar {
+    width: 100%;
+    height: 75px;
+    top: 0;
+    position: relative;
+    z-index: 3;
+}
+
+.brand {
+    width: 25rem;
+    float: left;
+    margin: 5px auto auto 50px;
+    transition: .3s;
+    align-items: center;
+}
+
+.brand hr {
+    width: 70%;
+    margin: auto;
+    display: block;
+    border: 1px solid #DB8953;
+    opacity: 1;
+}
+
+.brand h1 {
+    display: inline-block;
+    margin: auto;
+    font-size: 1.75rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #DB8953;
+    transition: .3s;
+}
+
+.brand h1 span {
+    color: whitesmoke;
+}
+
+.brand_img {
+    width: 60px;
+    height: auto;
+    margin-bottom: -15px;
+    display: inline-block;
+}
+
+.topbar_links {
+    width: fit-content;
+    height: fit-content;
+    float: right;
+    margin: 25px 50px auto auto;
+    display: block;
+}
+
+.topbar_links li {
+    width: fit-content;
+    height: max-content;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 50px;
+    list-style-type: none;
+    text-align: center;
+    align-items: center;
+}
+
+.topbar_links a {
+    display: block;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    font-size: 1.25rem;
+    color: white;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.topbar_links a:hover {
+    border-bottom: 2px solid #DB8953;
+}
+
+@media (min-width: 1220px) {}
+
+@media (max-width: 1220px) {
+    .navbar {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .brand {
+        margin-left: 20px;
+    }
+
+    .topbar_links {
+        width: 0%;
+        height: 100vh;
+        margin: 0;
+        right: 0;
+        display: block;
+        position: absolute;
+        overflow: hidden;
+        padding: 150px 0 0 0;
+        background-color: #181818;
+        transition: .2s;
+    }
+
+    .topbar_links li {
+        width: 100%;
+        height: 60px;
+        margin: 0;
+        display: block;
+    }
+
+    .topbar_links a {
+        width: 80%;
+        margin: auto;
+        padding: 25px 0 25px 20%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        line-height: 50%;
+        text-align: left;
+        color: #DB8953;
+    }
+
+    .topbar_links a:hover {
+        color: #181818;
+        background-color: #DB8953;
+    }
+}
+
+@media (max-width: 768px) {
+    .brand h1 {
+        display: none;
+    }
+
+    .brand_img {
+        margin: 5px auto;
+    }
+}
+
+@media (max-width: 425px) {
+    .brand {
+        width: 12rem;
+    }
+
+    .topbar_links a {
+        padding-left: 30%;
+    }
+}

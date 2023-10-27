@@ -1,0 +1,126 @@
+.form_container {
+    flex-grow: 1;
+}
+
+.login_form {
+    width: 400px;
+    height: fit-content;
+    margin: 100px auto;
+    display: block;
+    padding: 25px;
+    box-shadow: rgba(219, 137, 83, 0.2) 0px 2px 8px 0px;
+    transition: .3s;
+}
+
+.login_form h1 {
+    margin-bottom: 50px;
+    text-align: center;
+    color: lightgray;
+}
+
+.login_form input {
+    width: 85%;
+    height: 40px;
+    margin: 5px auto;
+    display: block;
+    padding-left: 50px;
+    border: 2px solid rgba(219, 137, 83, .25);
+    font-size: medium;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.login_form input:focus {
+    border: 2px solid #DB8953;
+    outline: #DB8953;
+}
+
+.login_form button {
+    width: 100%;
+    margin: 30px auto 30px auto;
+    display: block;
+    padding: 10px;
+    border: 2px solid #DB8953;
+    border-radius: 0;
+    font-size: large;
+    color: #181818;
+    background-color: #DB8953;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.login_form button:hover {
+    color: #DB8953;
+    background-color: transparent;
+}
+
+.login_form p {
+    margin: auto auto 15px 10px;
+}
+
+.login_form a {
+    color: #DB8953;
+}
+
+.login_form a:hover {
+    color: white;
+}
+
+#user_email {
+    margin-bottom: 5px;
+    background: url('/static/images/mail.svg') transparent no-repeat 15px center;
+}
+
+#user_pwd {
+    margin-top: 15px;
+    background: url('/static/images/lock.svg') transparent no-repeat 15px center;
+}
+
+.verification_error {
+    text-align: center;
+    color: rgb(248, 88, 88, .75);
+}
+
+.error_message {
+    width: fit-content;
+    display: inline;
+    color: rgb(248, 88, 88, .75);
+}
+
+.forgot_link {
+    float: right;
+    margin-bottom: 25px;
+}
+
+.signup_link {
+    color: lightgray;
+}
+
+@media (max-width: 425px) {
+    .login_form {
+        width: 95%;
+        margin: 150px auto;
+        padding: 0;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .login_form input {
+        width: 75%;
+        margin: 5px auto;
+        padding-left: 50px;
+    }
+
+    .login_form a {
+        padding-right: 5%;
+    }
+
+    .login_form button {
+        width: 90%;
+    }
+
+    .login_form p {
+        padding-left: 5%;
+    }
+}

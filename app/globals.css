@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Lora-Regular';
+    src: url('/static/fonts/Lora/static/Lora-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Lora-Bold';
+    src: url('/static/fonts/Lora/static/Lora-Bold.ttf');
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    font-family: 'Lora-Regular';
+    background-color: #181818;
+    transition: .5s;
+}
+
+main {
+    flex-grow: 1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 50px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: 'Lora-Regular', Arial, Helvetica, sans-serif;
+}

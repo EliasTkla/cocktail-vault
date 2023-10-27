@@ -1,0 +1,130 @@
+.profile_container {
+    margin: auto;
+}
+
+.profile_container h1 {
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 3rem;
+    color: white;
+}
+
+.profile_form {
+    width: 600px;
+    height: fit-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto 100px;
+    row-gap: 15px;
+    flex-grow: 1;
+}
+
+.profile_form input {
+    width: 85%;
+    height: 40px;
+    margin: auto;
+    display: block;
+    padding-left: 50px;
+    border: 2px solid rgba(219, 137, 83, .25);
+    font-size: medium;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.profile_form input:focus {
+    border: 2px solid #DB8953;
+    outline: #DB8953;
+}
+
+.profile_form button {
+    width: 100px;
+    margin: auto;
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #DB8953;
+    border-radius: 0;
+    font-size: large;
+    color: #181818;
+    background-color: #DB8953;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.profile_form button:hover {
+    color: #DB8953;
+    background-color: transparent;
+}
+
+.profile_form p {
+    margin: auto auto 15px 10px;
+}
+
+.profile_form a {
+    color: #DB8953;
+}
+
+.profile_form a:hover {
+    color: white;
+}
+
+#user_name {
+    background: url('/static/images/user1.svg') transparent no-repeat 15px center;
+}
+
+#user_email {
+    background: url('/static/images/mail.svg') transparent no-repeat 15px center;
+}
+
+#user_pwd {
+    background: url('/static/images/lock.svg') transparent no-repeat 15px center;
+}
+
+.verification_error {
+    text-align: center;
+    color: rgb(248, 88, 88, .75);
+}
+
+.error_message {
+    width: fit-content;
+    display: inline;
+    color: rgb(248, 88, 88, .75);
+}
+
+.forgot_link {
+    float: right;
+    margin-bottom: 25px;
+}
+
+.profile_link {
+    color: lightgray;
+}
+
+@media (max-width: 425px) {
+    .profile_form {
+        width: 95%;
+        margin: 150px auto;
+        padding: 0;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .profile_form input {
+        width: 75%;
+        margin: 5px auto;
+        padding-left: 50px;
+    }
+
+    .profile_form a {
+        padding-right: 5%;
+    }
+
+    .profile_form button {
+        width: 90%;
+    }
+
+    .profile_form p {
+        padding-left: 5%;
+    }
+}

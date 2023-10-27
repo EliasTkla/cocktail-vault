@@ -1,0 +1,106 @@
+.comment-container {
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 30% 55% 5% 5%;
+    color: white;
+}
+
+.reply-container {
+    width: 90%;
+    height: fit-content;
+    margin: auto auto auto 8%;
+    padding-left: 1.5%;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 30% 55% 5% 5%;
+    border-left: 3px solid rgba(219, 137, 83, .5);
+    color: white;
+}
+
+.comment-container h4, .reply-container h4 {
+    color: #DB8953;
+}
+
+.comment-container p, .reply-container p {
+    display: block;
+    margin-top: -8px;
+    grid-area: 2 / 1 / span 2 / span 4;
+}
+
+.reply-btn {
+    width: fit-content;
+    padding: 6px;
+    background: rgba(219, 137, 83, .25);
+    border: none;
+    color: #DB8953;
+    transition: .2s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.reply-btn:hover {
+    background: rgba(219, 137, 83, 0);
+}
+
+.hide-comment-btn {
+    width: 24px;
+    height: 24px;
+    padding: 6px;
+    border: none;
+    background: url('/static/images/hide.svg') transparent no-repeat;
+    cursor: pointer;
+    user-select: none;
+}
+
+.hide-comment-btn:hover {
+    filter: invert(50%);
+}
+
+.hide-comment {
+    height: 50px;
+    overflow: hidden;
+}
+
+.reply-input {
+    width: 80%;
+    height: fit-content;
+    margin: auto auto auto 8%;
+    padding-left: 1.5%;
+    border-left: 3px solid rgba(219, 137, 83, .5);
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 10px;
+    row-gap: 5px;
+}
+
+.reply-input textarea {
+    width: 96%;
+    padding: 2%;
+    grid-area: 1 / 1 / span 1 / span 4;
+    font-size: medium;
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: rgba(219, 137, 83, .45);
+}
+
+.reply-input textarea::placeholder {
+    color: black;
+}
+
+#cancel-reply {
+    grid-area: 2 / 3 / span 1 / span 1;
+}
+
+#submit-reply {
+    grid-area: 2 / 4 / span 1 / span 1;
+}
+
+.replies-container {
+    margin: auto auto auto 8%;
+    width: 90%;
+}

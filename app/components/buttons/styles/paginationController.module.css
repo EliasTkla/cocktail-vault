@@ -1,0 +1,21 @@
+.load_btn {
+    width: 200px;
+    height: 50px;
+    margin: 100px auto;
+    display: block;
+    border: 2px solid #DB8953;
+    text-transform: uppercase;
+    color: #181818;
+    background-color: #DB8953;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.load_btn:hover {
+    color: #DB8953;
+    background-color: transparent;
+}
+
+.hide_btn {
+    display: none;
+}

@@ -1,0 +1,146 @@
+.intro_text {
+    width: 50%;
+    height: 45em;
+    margin: 100px auto auto 12%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    transition: .2s;
+}
+
+.intro_text h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    outline: none;
+}
+
+.intro_text p {
+    width: 70%;
+    font-size: 1.25rem;
+    word-spacing: 5px;
+    line-height: 135%;
+    color: lightgray;
+}
+
+.popular_list {
+    width: 80%;
+    height: fit-content;
+    margin: auto;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+}
+
+.popular_list h1 {
+    width: 60%;
+    margin: 100px auto 100px auto;
+    text-transform: uppercase;
+    font-size: 3rem;
+    border-bottom: 2px solid whitesmoke;
+    line-height: 0.1rem;
+    color: #DB8953;
+}
+
+.popular_list h1 span {
+    padding: 0 15px;
+    background-color: #181818;
+}
+
+/* .popular_list p {
+    width: 80%;
+    margin: auto auto 50px auto;
+    padding: 15px;
+    font-size: large;
+    text-align: center;
+    color: darkgray;
+} */
+
+.collection_link {
+    padding-bottom: 15px;
+    border-bottom: 2px solid #DB8953;
+    font-size: large;
+    color: #DB8953;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.collection_link:hover {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+}
+
+@media (max-width: 1440px) {}
+
+
+@media (max-width: 1024px) {
+    .intro_text {
+        width: 60%;
+        margin: 100px auto auto 5%;
+    }
+
+    .intro_text h1 {
+        font-size: 5rem;
+    }
+
+    .intro_text p {
+        width: 80%;
+    }
+
+    .popular_list {
+        padding-top: 25px;
+    }
+
+    .popular_list h1 {
+        width: 80%;
+        height: fit-content;
+        margin: auto auto 100px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro_text {
+        width: 80%;
+        margin: 10vh auto auto 10%;
+    }
+
+    .intro_text h1 {
+        font-size: 4rem;
+    }
+
+    .intro_text p {
+        width: 100%;
+    }
+
+    .popular_list h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .intro_text {
+        width: 90%;
+        height: 35em;
+        margin: 150px auto auto 10%;
+    }
+
+    .intro_text h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro_text p {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .popular_list {
+        margin: auto auto 50px auto;
+    }
+
+    .popular_list h1 {
+        margin: auto auto 50px auto;
+        font-size: 1.5rem;
+    }
+}

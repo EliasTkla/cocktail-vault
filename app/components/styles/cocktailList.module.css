@@ -1,0 +1,55 @@
+.results_count {
+    width: fit-content;
+    margin: -40px auto 30px auto;
+    display: block;
+    text-align: center;
+    color: lightgray;
+}
+
+.home_slide {
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    overflow: auto;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.home_slide::-webkit-scrollbar {
+    display: none;
+}
+
+.card_spacing {
+    margin: 20px;
+}
+
+.results {
+    width: 100%;
+    min-height: 20vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
+    column-gap: 25px;
+    row-gap: 50px;
+    justify-content: space-evenly;
+}
+
+.error_message {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    color: #DB8953;
+}
+
+.error_message h3 {
+    color: lightgray;
+}
+
+.placeholder {
+    height: 20vh;
+    margin: auto;
+    color: #DB8953;
+}
