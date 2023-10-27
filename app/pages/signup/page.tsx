@@ -28,7 +28,7 @@ export default function SignUp() {
     async function registerUser() {
         const result = await addUser(user);
 
-        if (result) {
+        if (result == true) {
             router.push("/pages/login");
         } else {
             setVerificationError({
