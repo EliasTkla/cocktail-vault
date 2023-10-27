@@ -9,27 +9,34 @@ export const options: NextAuthOptions = {
                 email: {},
                 password: {}
             }, async authorize(credentials) {
-                const url = process.env.NEXT_PUBLIC_SERVER_URL + '/login';
-                const options = {
-                    method: "POST",
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        email: credentials?.email,
-                        password: credentials?.password
-                    })
-                };
+                try {
 
-                const response = await fetch(url, options);
-                const result = await response.text();
-                const user = JSON.parse(result);
 
-                if (user.tokens) {
-                    return user;
+                    const url = process.env.NEXT_PUBLIC_SERVER_URL + '/login';
+                    const options = {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            email: credentials?.email,
+                            password: credentials?.password
+                        })
+                    };
+
+                    const response = await fetch(url, options);
+                    const result = await response.text();
+                    const user = JSON.parse(result);
+
+                    if (user.tokens) {
+                        return user;
+                    }
+
+                    return null;
+                } catch (error) {
+                    console.log(error);
+                    return null;
                 }
-
-                return null
             }
         })
     ],
