@@ -25,8 +25,7 @@ export const options: NextAuthOptions = {
                     };
 
                     const response = await fetch(url, options);
-                    const result = await response.text();
-                    const user = JSON.parse(result);
+                    const user = await response.json();
 
                     if (user.tokens) {
                         return user;
@@ -73,8 +72,7 @@ export const options: NextAuthOptions = {
                     };
 
                     const response = await fetch(url, options);
-                    const result = await response.text();
-                    const refreshedTokens = JSON.parse(result);
+                    const refreshedTokens = await response.json();
 
                     if (!refreshedTokens) {
                         throw refreshedTokens;

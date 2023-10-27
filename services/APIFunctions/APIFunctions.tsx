@@ -10,8 +10,7 @@ export const getCocktailData = async () => {
 
     try {
         const response = await fetch(url, options);
-        const result = await response.text();
-        const data = JSON.parse(result);
+        const data = await response.json();
 
         if (data.message) {
             console.log(data.message);
@@ -39,9 +38,9 @@ export const getCocktailDetails = async (id: string) => {
 
     try {
         const response = await fetch(url, options);
-        const result = await response.text();
+        const result = await response.json();
 
-        data = JSON.parse(result);
+        data = result;
     } catch (error) {
         console.error(error);
     }

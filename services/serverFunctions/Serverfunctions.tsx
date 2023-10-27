@@ -14,8 +14,7 @@ export async function addUser(user: { username: string, email: string, password:
 
     try {
         const response = await fetch(url, options);
-        const result = await response.text();
-        const data = JSON.parse(result);
+        const data = await response.json();
 
         if (response.status == 201) {
             return data.message;
@@ -43,8 +42,7 @@ export const getFavourites = async (session: Session | null) => {
 
     try {
         const response = await fetch(url, options);
-        const result = await response.text();
-        const data = JSON.parse(result);
+        const data = await response.json();
 
         if (response.status == 200) {
             const array = data.favourites.filter((item: any) => {
@@ -111,8 +109,7 @@ export async function removeCocktial(email: string | null | undefined, token: st
 
     try {
         const response = await fetch(url, options);
-        const result = await response.text();
-        const data = JSON.parse(result);
+        const data = await response.json();
 
         if (response.status == 201) {
             console.log(data.message);
@@ -142,8 +139,7 @@ export async function addCocktial(email: string | null | undefined, token: strin
 
     try {
         const response = await fetch(url, options);
-        const result = await response.text();
-        const data = JSON.parse(result);
+        const data = await response.json();
 
         if (response.status == 201) {
             console.log(data.message);
@@ -171,8 +167,7 @@ export async function getRating(cocktail: string) {
 
     try {
         const response = await fetch(url, options);
-        const result = await response.text();
-        const data = JSON.parse(result);
+        const data = await response.json();
 
         if (response.status == 201) {
             return "0";
