@@ -43,17 +43,19 @@ export default async function cocktailDetails({ searchParams }: { searchParams: 
                                 )
                             })}
                         </ul>
-
-                        <h3><u>Instructions</u></h3>
-                        <ol>
-                            {cocktail.method.map((step: any, number: number) => {
-                                return (
-                                    <li key={cocktail.id + '/' + number}>{step['Step ' + (number + 1)]}</li>
-                                )
-                            })}
-                        </ol>
                     </div>
                 </div>
+            </div>
+
+            <div className={styles.instructions_container}>
+                <h3><u>Instructions</u></h3>
+                <ol>
+                    {cocktail.method.map((step: any, number: number) => {
+                        return (
+                            <li key={cocktail.id + '/' + number}>{step['Step ' + (number + 1)]}</li>
+                        )
+                    })}
+                </ol>
             </div>
         </>
     )
