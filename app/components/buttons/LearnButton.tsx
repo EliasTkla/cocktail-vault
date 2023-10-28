@@ -1,16 +1,16 @@
 'use client';
-import styles from './styles/customButton.module.css';
+import { useRouter } from 'next/navigation';
+import styles from './styles/learnButton.module.css';
 import Link from 'next/link';
 
 export default function CustomButton() {
+    const router = useRouter();
 
     return (
         <div className={styles.button_container}>
-            <Link href={"/pages/about"} as={"/pages/about"}>
-                <span></span>
-                <button>Learn More</button>
-                <span></span>
-            </Link>
+            <span></span>
+            <button onClick={() => { router.push("/pages/about") }}>Learn More</button>
+            <span></span>
         </div>
     )
 }

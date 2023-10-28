@@ -47,9 +47,9 @@ export default async function CocktailList({ page, query, per_load }: { page: st
                                 <>
                                     {cocktails.slice(50, 70).map((item: Cocktail) => {
                                         return (
-                                            <span key={item.id} className={styles.card_spacing}>
+                                            <div key={item.id} className={styles.card_spacing}>
                                                 <CocktailCard {...item} />
-                                            </span>
+                                            </div>
                                         )
                                     })}
                                 </>
@@ -57,9 +57,9 @@ export default async function CocktailList({ page, query, per_load }: { page: st
                                 <>
                                     {list.slice(0, end).map((item: Cocktail) => {
                                         return (
-                                            <span key={item.id}>
+                                            <div key={item.id}>
                                                 <CocktailCard {...item} />
-                                            </span>
+                                            </div>
                                         )
                                     })}
                                 </>
