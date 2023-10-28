@@ -1,11 +1,13 @@
 @font-face {
     font-family: 'Lora-Regular';
-    src: url('/static/fonts/Lora/static/Lora-Regular.ttf');
+    src: url('/static/fonts/Lora/Lora-Regular.ttf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Lora-Bold';
-    src: url('/static/fonts/Lora/static/Lora-Bold.ttf');
+    src: url('/static/fonts/Lora/Lora-Bold.ttf');
+    font-display: swap;
 }
 
 body {
