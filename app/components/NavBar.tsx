@@ -22,7 +22,7 @@ export default async function NavBar() {
                         <h1><span>Cocktail</span></h1>
                         <Image
                             src="/static/images/cocktail.svg"
-                            alt="brand logo"
+                            alt="cocktail icon"
                             className={styles.brand_img}
                             width={0}
                             height={0}

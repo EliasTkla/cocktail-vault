@@ -19,12 +19,12 @@ export default function SlideButton() {
 
     return (
         <>
-            <button className={styles.slide} onClick={() => { slideShow("left"); }} >
-                <i className={`${styles.arrow} ${styles.left}`}></i>
+            <button className={styles.slide} onClick={() => { slideShow("left"); }} title='slide left'>
+                <span className={`${styles.arrow} ${styles.left}`}></span>
             </button>
 
-            <button className={styles.slide} onClick={() => { slideShow("right"); }} >
-                <i className={`${styles.arrow} ${styles.right}`}></i>
+            <button className={styles.slide} onClick={() => { slideShow("right"); }} title='slide right' >
+                <span className={`${styles.arrow} ${styles.right}`}></span>
             </button>
         </>
     );

@@ -9,7 +9,7 @@ export default function CustomButton() {
     return (
         <div className={styles.button_container}>
             <span></span>
-            <button onClick={() => { router.push("/pages/about") }}>Learn More</button>
+            <button title='about page link' onClick={() => { router.push("/pages/about") }}>Learn More</button>
             <span></span>
         </div>
     )

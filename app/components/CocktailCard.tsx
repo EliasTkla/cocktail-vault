@@ -10,7 +10,7 @@ export default function CocktailCard({ id, title, image, difficulty }: Cocktail)
                 <div className={styles.image_wrapper}>
                     <Image
                         src={image}
-                        alt="cocktail drink"
+                        alt={title}
                         width={0}
                         height={0}
                         sizes="100vw"
@@ -19,9 +19,9 @@ export default function CocktailCard({ id, title, image, difficulty }: Cocktail)
                 </div>
 
                 <div className={styles.drink_text}>
-                    <div>
+                    <span>
                         <h3>{title}</h3>
-                    </div>
+                    </span>
 
                     <h4>{difficulty}</h4>
                 </div>

@@ -36,7 +36,7 @@ export default function NavToggleButton() {
 
     return (
         <>
-            <button id='sidebar-toggler' className={styles.toggler} onClick={() => { toggleSideBar() }}>
+            <button id='sidebar-toggler' title='sidebar toggle' className={styles.toggler} onClick={() => { toggleSideBar() }}>
                 <span id="bar1" className={styles.burger_bars}></span>
                 <span id="bar2" className={styles.burger_bars}></span>
                 <span id="bar3" className={styles.burger_bars}></span>

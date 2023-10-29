@@ -8,7 +8,7 @@ export default function Footer() {
                 <Link href={"/"} as={"/"}>Home</Link>
                 <Link href={"/pages/about"} as={"/pages/about"}>About</Link>
                 <Link href={"/pages/collection"} as={"/pages/collection"}>Collection</Link>
-                <Link href={"mailto:eliastokola88@gmail.com"} as={"mailto: eliastokola88@gmail.com"}>Contact</Link>
+                <Link href={"mailto:eliastokola88@gmail.com"} as={"mailto:eliastokola88@gmail.com"}>Contact</Link>
             </div>
         </footer>
     )

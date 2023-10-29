@@ -36,6 +36,14 @@
     justify-content: space-evenly;
 }
 
+.home_slide div {
+    display: inline-block;
+}
+
+.results div {
+    display: inline-block;
+}
+
 .error_message {
     width: 80%;
     margin: auto;

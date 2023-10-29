@@ -8,7 +8,8 @@ export const metadata: Metadata = {
     title: 'Cocktail Vault',
     icons: {
         icon: '/static/images/cocktail.svg'
-    }
+    },
+    description: 'Browse through a collection of cocktail recipes to save the right drink for any occasion.'
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

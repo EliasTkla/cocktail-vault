@@ -45,7 +45,7 @@
     background-image: linear-gradient(to top, #181818, rgba(0, 0, 0, 0));
 }
 
-.drink_text div {
+.drink_text span {
     height: 150px;
     display: flex;
 }
@@ -57,9 +57,12 @@
     display: block;
     align-self: flex-end;
     text-wrap: wrap;
+    white-space: normal;
+    font-weight: normal;
 }
 
 .drink_text h4 {
+    font-weight: normal;
     color: #DB8953;
 }
 
