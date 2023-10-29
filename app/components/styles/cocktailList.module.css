@@ -15,8 +15,6 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
     scroll-behavior: smooth;
-    border-top: 2px solid rgba(219, 137, 83, .25);
-    border-bottom: 2px solid rgba(219, 137, 83, .25);
 }
 
 .home_slide::-webkit-scrollbar {
@@ -29,7 +27,7 @@
 
 .results {
     width: 100%;
-    min-height: 20vh;
+    min-height: 30vh;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 300px));

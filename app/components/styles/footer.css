@@ -7,7 +7,7 @@ footer {
     left: 0;
     right: 0;
     text-align: center;
-    background: rgba(219, 137, 83, .25);
+    background: rgba(219, 137, 83, .85);
 }
 
 footer div {
@@ -15,7 +15,7 @@ footer div {
 }
 
 footer div a {
-    color: lightgrey;
+    color: #181818;
     padding: 25px;
     text-decoration: none;
     font-size: large;
@@ -23,7 +23,7 @@ footer div a {
 }
 
 footer a:hover {
-    color: #DB8953;
+    color: white;
 }
 
 @media (max-width: 650px) {

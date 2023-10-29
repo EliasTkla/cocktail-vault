@@ -14,7 +14,7 @@ export default function CocktailCard({ id, title, image, difficulty }: Cocktail)
                         width={0}
                         height={0}
                         sizes="100vw"
-                        style={{ width: "150%", height: "auto", transition: ".3s", marginLeft: "-25%" }}
+                        style={{ width: "auto", height: "115%", transition: ".3s", marginLeft: "-25%", objectFit: "cover" }}
                     />
                 </div>
 
