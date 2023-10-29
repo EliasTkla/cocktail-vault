@@ -7,15 +7,12 @@ import Loading from '@/app/components/Loading';
 import { getServerSession } from 'next-auth';
 import { options } from '@/app/api/auth/[...nextauth]/options';
 import ToTopButton from '@/app/components/buttons/ToTopButton';
-import { revalidateTag } from 'next/cache';
 
 export default async function Favourites({ searchParams }: { searchParams: { search: string } }) {
     const session = await getServerSession(options);
 
     if (!session?.user?.email) {
         redirect('/pages/login');
-    } else {
-        revalidateTag('collection');
     }
 
     return (

@@ -12,7 +12,7 @@ export default function ClientRouteButton({ authenticated }: { authenticated: bo
         <>
             {authenticated ?
                 <>
-                    <li><Link href={"/pages/favourites"} as={"/pages/favourites"} >Favourites</Link></li>
+                    <li><Link href={"/pages/favourites"} as={"/pages/favourites"} onClick={() => { router.refresh() }}>Favourites</Link></li>
                     <li><Link href={"#"} as={"#"}>{session.data?.user?.name ? session.data?.user?.name : '...'}</Link></li>
                     <li><button className={styles.logout_btn} onClick={() => { signOut(); }}></button></li>
                 </>

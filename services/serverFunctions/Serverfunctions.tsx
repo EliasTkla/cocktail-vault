@@ -38,9 +38,6 @@ export const getFavourites = async (session: Session | null) => {
         body: JSON.stringify({
             email: session?.user?.email
         }),
-        next: {
-            tags: ['collection']
-        }
     };
 
     try {
