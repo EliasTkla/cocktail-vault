@@ -25,9 +25,7 @@ export default function Home() {
             <Banner backgroundFile={"homeBanner.jpg"} containerClass={"background_container"} imageClass={"background"} />
 
             <div className={styles.popular_list}>
-                <h1>
-                    <span>Featured Cocktails</span>
-                </h1>
+                <h2>Featured Cocktails</h2>
 
                 <CocktailList page={"home"} />
 

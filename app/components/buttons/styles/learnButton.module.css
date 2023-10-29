@@ -37,6 +37,7 @@
 
 @media (max-width: 425px) {
     .button_container {
-        width: 15rem;
+        width: 12rem;
+        font-size: 1.5rem;
     }
 }
