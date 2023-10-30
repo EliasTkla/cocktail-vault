@@ -15,19 +15,17 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <>
-            <html lang="en">
-                <body>
-                    <AuthProvider>
-                        <NavBar />
-                        <main>
-                            {children}
-                        </main>
-                        <Footer />
-                    </AuthProvider>
-                </body>
-            </html>
-            <Analytics />
-        </>
+        <html lang="en">
+            <body>
+                <AuthProvider>
+                    <NavBar />
+                    <main>
+                        {children}
+                    </main>
+                    <Footer />
+                </AuthProvider>
+                <Analytics />
+            </body>
+        </html>
     )
 }
