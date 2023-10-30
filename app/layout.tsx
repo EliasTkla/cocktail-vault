@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import AuthProvider from './components/providers/AuthProvider';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
     title: 'Cocktail Vault',
@@ -14,16 +15,19 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en">
-            <body>
-                <AuthProvider>
-                    <NavBar />
-                    <main>
-                        {children}
-                    </main>
-                    <Footer />
-                </AuthProvider>
-            </body>
-        </html>
+        <>
+            <html lang="en">
+                <body>
+                    <AuthProvider>
+                        <NavBar />
+                        <main>
+                            {children}
+                        </main>
+                        <Footer />
+                    </AuthProvider>
+                </body>
+            </html>
+            <Analytics />
+        </>
     )
 }
