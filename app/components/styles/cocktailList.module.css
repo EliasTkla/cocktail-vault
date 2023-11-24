@@ -30,9 +30,8 @@
     min-height: 30vh;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
-    column-gap: 25px;
-    row-gap: 50px;
+    grid-template-columns: repeat(4, 24%);
+    row-gap: 25px;
     justify-content: space-evenly;
 }
 
@@ -60,4 +59,18 @@
     height: 20vh;
     margin: auto;
     color: #DB8953;
+}
+
+@media (max-width: 1024px) {
+    .results {
+        grid-template-columns: repeat(3, 32%);
+    }
+}
+
+@media (max-width: 425px) {
+    .results {
+        grid-template-columns: repeat(2, 48%);
+        column-gap: 4%;
+        row-gap: 10px;
+    }
 }

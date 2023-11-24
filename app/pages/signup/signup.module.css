@@ -104,10 +104,11 @@
 @media (max-width: 425px) {
     .signup_form {
         width: 95%;
-        margin: 150px auto;
+        margin: auto;
         padding: 0;
         padding-top: 25px;
         padding-bottom: 25px;
+        box-shadow: none;
     }
 
     .signup_form input {

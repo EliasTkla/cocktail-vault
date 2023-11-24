@@ -35,6 +35,12 @@
 
 @media (max-width: 425px) {
     .searchbar {
-        width: 85%;
+        width: 80%;
+    }
+}
+
+@media (max-width: 300px) {
+    .searchbar {
+        width: 75%;
     }
 }

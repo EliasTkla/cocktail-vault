@@ -22,7 +22,7 @@ export async function addUser(user: { username: string, email: string, password:
             return true;
         }
     } catch (error) {
-        console.error(error);
+        // console.error(error);
         return "Something went wrong, please try again in a while!";
     }
 }
@@ -56,7 +56,7 @@ export const getFavourites = async (session: Session | null) => {
 
         return "empty";
     } catch (error) {
-        console.error(error);
+        // console.error(error);
         return "error";
     }
 }
@@ -85,7 +85,7 @@ export async function getSavedState(email: string | null | undefined, token: str
                 return false;
             }
         } catch (error) {
-            console.error(error);
+            // console.error(error);
             return false;
         }
     }
@@ -118,7 +118,7 @@ export async function removeCocktial(email: string | null | undefined, token: st
             return false;
         }
     } catch (error) {
-        console.error(error);
+        // console.error(error);
         return true;
     }
 }
@@ -148,7 +148,7 @@ export async function addCocktial(email: string | null | undefined, token: strin
             return true;
         }
     } catch (error) {
-        console.error(error);
+        // console.error(error);
         return false;
     }
 }
@@ -187,7 +187,7 @@ export async function getRating(cocktail: string) {
             return Math.round(sum / count).toString();
         }
     } catch (error) {
-        console.error(error);
+        // console.error(error);
         return "0";
     }
 }
@@ -216,7 +216,7 @@ export async function updateRating(cocktail: string, email: string | null | unde
             return false;
         }
     } catch (error) {
-        console.error(error);
+        // console.error(error);
         return false;
     }
 }

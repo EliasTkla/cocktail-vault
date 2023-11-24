@@ -7,7 +7,7 @@ import { signIn, useSession } from 'next-auth/react';
 import Loading from '@/app/components/Loading';
 
 export default function Login() {
-    const session = useSession();
+    const { status } = useSession();
     const router = useRouter();
     const emailRegex = new RegExp(/^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/);
     const passwordRegex = new RegExp(/^[a-zA-Z0-9]{8,}$/);
@@ -15,10 +15,10 @@ export default function Login() {
     const [verificationError, setVerificationError] = useState("");
 
     useEffect(() => {
-        if (session.status == 'authenticated') {
+        if (status === 'authenticated') {
             router.push("/");
         }
-    }, [session]);
+    }, [status]);
 
     function verifyUser() {
         signIn('credentials', {
@@ -26,7 +26,9 @@ export default function Login() {
             password: user.password,
             redirect: false
         }).then((response) => {
-            if (response?.error) {
+            if (response?.error === null) {
+                setVerificationError("Something went wrong, please try again!");
+            } else if (response?.error) {
                 if (response?.error == 'fetch failed') {
                     setVerificationError("Something went wrong, please try again!");
                 } else {
@@ -64,7 +66,7 @@ export default function Login() {
 
     return (
         <>
-            {session.status == 'unauthenticated' ?
+            {status == 'unauthenticated' ?
                 <div className={styles.form_container}>
                     <form className={styles.login_form} autoComplete='off' onSubmit={(e) => { verifyInput(e) }}>
                         <h1>Welcome back!</h1>

@@ -1,8 +1,8 @@
 footer {
     width: 100%;
     margin-top: 100px;
-    padding-top: 4vh;
-    padding-bottom: 4vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -10,35 +10,37 @@ footer {
     background: rgba(219, 137, 83, .85);
 }
 
-footer div {
-    width: 100%;
-}
-
-footer div a {
+footer a {
     color: #181818;
     padding: 25px;
     text-decoration: none;
-    font-size: large;
-    text-align: left;
+    font-size: 1.25rem;
+    text-align: center;
 }
 
 footer a:hover {
     color: white;
 }
 
-@media (max-width: 650px) {
-    footer div {
-        width: fit-content;
-        height: auto;
-        margin: auto;
+@media (max-width: 500px) {
+    footer a {
+        padding: 12.5px;
+        font-size: small;
+    }
+}
+
+@media (max-width: 300px) {
+    footer {
+        padding-top: 15px;
+        padding-bottom: 15px;
         display: grid;
         grid-template-columns: repeat(2, auto);
-        column-gap: 50px;
-        row-gap: 50px;
-        line-height: 100%;
+        justify-content: center;
+        column-gap: 5px;
+        row-gap: 5px;
     }
 
-    footer div a {
-        padding: 0;
+    footer a {
+        text-align: left;
     }
 }

@@ -1,17 +1,50 @@
+'use client';
 import Link from 'next/link';
 import styles from './styles/navbar.module.css';
 import Image from 'next/image';
-import { signOut } from 'next-auth/react';
-import { getServerSession } from 'next-auth';
-import { options } from '../api/auth/[...nextauth]/options';
-import RouteButton from './buttons/ClientRouteButton';
-import NavToggleButton from './buttons/NavToggleButton';
+import { signOut, useSession } from 'next-auth/react';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
-export default async function NavBar() {
-    const session = await getServerSession(options);
+export default function NavBar() {
+    const session = useSession();
+    const router = useRouter();
+    const [mobileNavbar, setMobileNavbar] = useState<boolean>(false);
+    const [overlay, setOverlay] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
-    if (session?.error == "Refresh token unauthorized") {
-        signOut();
+    // Effect to set loading state for auth buttons to load
+    useEffect(() => {
+        setTimeout(() => { setIsLoading(false) }, 1000);
+    }, []);
+
+    // useEffect(() => {
+    //     if (session.status === 'unauthenticated') {
+    //         signOut();
+    //     }
+    // }, [session]);
+
+    const toggleSideBar = () => {
+        setMobileNavbar(!mobileNavbar);
+
+        var sidebar = document.getElementById('topbar');
+        var toggle = document.getElementById("sidebar-toggler");
+
+        if (sidebar && toggle) {
+            var w = window.innerWidth;
+
+            if (mobileNavbar) {
+                toggle.classList.add(styles.toggle_animation);
+                setOverlay(true);
+                document.body.style.overflowY = "hidden";
+                sidebar.style.right = "0";
+            } else {
+                toggle.classList.remove(styles.toggle_animation);
+                setOverlay(false);
+                document.body.style.overflowY = "auto";
+                sidebar.style.right = w > 425 ? "-50%" : "-100%";
+            }
+        }
     }
 
     return (
@@ -34,19 +67,44 @@ export default async function NavBar() {
                 </div>
 
                 <ul id={'topbar'} className={styles.topbar_links}>
-                    <li><Link href={"/"} as={"/"}>Home</Link></li>
-                    <li><Link href={"/pages/about"} as={"/pages/about"}>About</Link></li>
-                    <li><Link href={"/pages/collection"} as={"/pages/collection"}>Collection</Link></li>
-
-                    {session?.user ?
-                        <RouteButton authenticated={true} />
+                    {isLoading ?
+                        <>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </>
                         :
-                        <RouteButton authenticated={false} />
+                        <>
+                            <li><Link href={"/"} as={"/"} onClick={toggleSideBar}>Home</Link></li>
+                            <li><Link href={"/pages/about"} as={"/pages/about"} onClick={toggleSideBar}>About</Link></li>
+                            <li><Link href={"/pages/collection"} as={"/pages/collection"} onClick={toggleSideBar}>Collection</Link></li>
+
+                            {session.data?.user ?
+                                <>
+                                    <li><Link href={"/pages/favourites"} as={"/pages/favourites"} onClick={() => { router.refresh(); toggleSideBar(); }}>Favourites</Link></li>
+                                    <li><Link href={"#"} as={"#"} onClick={toggleSideBar}>{session.data?.user?.name ? session.data?.user?.name : '...'}</Link></li>
+                                    <li><button className={styles.logout_btn} onClick={() => { signOut(); toggleSideBar(); }}></button></li>
+                                </>
+                                :
+                                <li><button className={styles.login_btn} onClick={() => { router.push('/pages/login'); toggleSideBar(); }}>Login</button></li>
+                            }
+                        </>
                     }
                 </ul>
             </nav >
 
-            <NavToggleButton />
+            <button id='sidebar-toggler' title='sidebar toggle' className={styles.toggler} onClick={toggleSideBar}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            {overlay && (
+                <div id='overlay' className={styles.overlay} onClick={toggleSideBar}></div>
+            )}
         </>
     )
 }                       
