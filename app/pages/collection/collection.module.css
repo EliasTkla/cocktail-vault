@@ -6,9 +6,6 @@
 .search_container {
     width: 45%;
     margin: 225px auto 110px auto;
-    /* display: grid; */
-    /* grid-template-columns: auto;
-    column-gap: 10px; */
     transition: .3s;
     position: relative;
     z-index: 1;
@@ -27,6 +24,10 @@
 }
 
 @media (max-width: 768px) {
+    .collection_container {
+        width: 95%;
+    }
+
     .search_container {
         width: 85%;
     }
@@ -35,7 +36,6 @@
 @media (max-width: 425px) {
     .search_container {
         width: 100%;
-        margin: 150px auto;
-        /* grid-template-columns: auto 50px; */
+        margin: 150px auto 75px auto;
     }
 }
