@@ -18,11 +18,11 @@ export default function NavBar() {
         setTimeout(() => { setIsLoading(false) }, 1000);
     }, []);
 
-    // useEffect(() => {
-    //     if (session.status === 'unauthenticated') {
-    //         signOut();
-    //     }
-    // }, [session]);
+    useEffect(() => {
+        if (session.status === 'unauthenticated') {
+            signOut();
+        }
+    }, [session]);
 
     const toggleSideBar = () => {
         setMobileNavbar(!mobileNavbar);
@@ -82,7 +82,7 @@ export default function NavBar() {
                             <li><Link href={"/pages/about"} as={"/pages/about"} onClick={toggleSideBar}>About</Link></li>
                             <li><Link href={"/pages/collection"} as={"/pages/collection"} onClick={toggleSideBar}>Collection</Link></li>
 
-                            {session.data?.user ?
+                            {session.data ?
                                 <>
                                     <li><Link href={"/pages/favourites"} as={"/pages/favourites"} onClick={() => { router.refresh(); toggleSideBar(); }}>Favourites</Link></li>
                                     <li><Link href={"#"} as={"#"} onClick={toggleSideBar}>{session.data?.user?.name ? session.data?.user?.name : '...'}</Link></li>

@@ -32,6 +32,8 @@ export default async function CocktailList({ page, query, per_load }: { page: st
         list = cocktails;
     }
 
+    list = cocktails;
+
     if (query) {
         list = list.filter(item => item.difficulty.toLowerCase().includes(query.toLowerCase()) || item.title.toLowerCase().includes(query.toLowerCase()));
     }
@@ -42,7 +44,7 @@ export default async function CocktailList({ page, query, per_load }: { page: st
                 <>
                     <>
                         {page != "home" ? <div className={styles.results_count}>Cocktails - {list.length}</div> : ''}
-                        <div id="slide_show" className={page == "home" ? styles.home_slide : styles.results}>
+                        <div id="slide_show" className={page == "home" ? styles.home_slide : (page == "favourites" ? styles.fave_results : styles.results)}>
                             {page == "home" ?
                                 <>
                                     {cocktails.slice(50, 70).map((item: Cocktail) => {
