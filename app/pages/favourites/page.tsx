@@ -29,7 +29,7 @@ export default async function Favourites({ searchParams }: { searchParams: { sea
                         </div>
 
                         <div>
-                            <CocktailList query={searchParams.search ? searchParams.search : ""} page={"favourites"} />
+                            <CocktailList query={searchParams.search ? searchParams.search : ""} page='favourites' />
 
                             <ToTopButton />
                         </div>

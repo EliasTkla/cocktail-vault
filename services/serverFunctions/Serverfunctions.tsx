@@ -112,7 +112,6 @@ export async function removeCocktial(email: string | null | undefined, token: st
         const data = await response.json();
 
         if (response.status == 201) {
-            console.log(data.message);
             return true;
         } else {
             return false;
@@ -142,7 +141,6 @@ export async function addCocktial(email: string | null | undefined, token: strin
         const data = await response.json();
 
         if (response.status == 201) {
-            console.log(data.message);
             return false;
         } else {
             return true;

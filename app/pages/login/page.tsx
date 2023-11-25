@@ -26,9 +26,7 @@ export default function Login() {
             password: user.password,
             redirect: false
         }).then((response) => {
-            if (response?.error === null) {
-                setVerificationError("Something went wrong, please try again!");
-            } else if (response?.error) {
+            if (response?.error) {
                 if (response?.error == 'fetch failed') {
                     setVerificationError("Something went wrong, please try again!");
                 } else {
@@ -77,8 +75,6 @@ export default function Login() {
                         <input id={styles.user_email} type='text' name='email' value={user.email} placeholder='Email' onChange={(e) => { inputChange(e) }} autoComplete='off' />
 
                         <input id={styles.user_pwd} type='password' name='password' placeholder='Password' onChange={(e) => { inputChange(e) }} autoComplete='off' />
-
-                        {/* <Link className={styles.forgot_link} href={"#"} >Forgot Password?</Link> */}
 
                         <button type='submit' >LOGIN</button>
 
