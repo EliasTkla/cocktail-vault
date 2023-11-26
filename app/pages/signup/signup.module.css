@@ -5,10 +5,10 @@
 .signup_form {
     width: 400px;
     height: fit-content;
-    margin: 100px auto;
+    margin: 175px auto;
     display: block;
     padding: 25px;
-    box-shadow: rgba(219, 137, 83, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgb(218, 166, 88, .2) 0px 2px 8px 0px;
 }
 
 .signup_form h1 {
@@ -23,7 +23,7 @@
     margin: 5px auto;
     display: block;
     padding-left: 50px;
-    border: 2px solid rgba(219, 137, 83, .25);
+    border: 2px solid rgb(218, 166, 88, .25);
     font-size: medium;
     color: white;
     background-color: transparent;
@@ -31,8 +31,8 @@
 }
 
 .signup_form input:focus {
-    border: 2px solid #DB8953;
-    outline: #DB8953;
+    border: 2px solid #DAA657;
+    outline: #DAA657;
 }
 
 .signup_form button {
@@ -40,17 +40,17 @@
     margin: 30px auto 30px auto;
     display: block;
     padding: 10px;
-    border: 2px solid #DB8953;
+    border: 2px solid #DAA657;
     border-radius: 0;
     font-size: large;
-    color: #181818;
-    background-color: #DB8953;
+    color: #1E1E1E;
+    background-color: #DAA657;
     cursor: pointer;
     transition: .2s;
 }
 
 .signup_form button:hover {
-    color: #DB8953;
+    color: #DAA657;
     background-color: transparent;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .signup_form a {
-    color: #DB8953;
+    color: #DAA657;
 }
 
 .signup_form a:hover {
@@ -104,7 +104,7 @@
 @media (max-width: 425px) {
     .signup_form {
         width: 95%;
-        margin: auto;
+        margin: 75px auto;
         padding: 0;
         padding-top: 25px;
         padding-bottom: 25px;

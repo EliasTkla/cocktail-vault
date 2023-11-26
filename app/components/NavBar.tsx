@@ -18,31 +18,29 @@ export default function NavBar() {
         setTimeout(() => { setIsLoading(false) }, 1000);
     }, []);
 
-    useEffect(() => {
-        if (session.status === 'unauthenticated') {
-            signOut();
-        }
-    }, [session]);
 
     const toggleSideBar = () => {
-        setMobileNavbar(!mobileNavbar);
+        var w = window.innerWidth;
 
-        var sidebar = document.getElementById('topbar');
-        var toggle = document.getElementById("sidebar-toggler");
+        if (w < 1220) {
+            setMobileNavbar(!mobileNavbar);
 
-        if (sidebar && toggle) {
-            var w = window.innerWidth;
+            var sidebar = document.getElementById('topbar');
+            var toggle = document.getElementById("sidebar-toggler");
 
-            if (mobileNavbar) {
-                toggle.classList.add(styles.toggle_animation);
-                setOverlay(true);
-                document.body.style.overflowY = "hidden";
-                sidebar.style.right = "0";
-            } else {
-                toggle.classList.remove(styles.toggle_animation);
-                setOverlay(false);
-                document.body.style.overflowY = "auto";
-                sidebar.style.right = w > 425 ? "-50%" : "-100%";
+            if (sidebar && toggle) {
+
+                if (mobileNavbar) {
+                    toggle.classList.add(styles.toggle_animation);
+                    setOverlay(true);
+                    document.body.style.overflowY = "hidden";
+                    sidebar.style.right = "0";
+                } else {
+                    toggle.classList.remove(styles.toggle_animation);
+                    setOverlay(false);
+                    document.body.style.overflowY = "auto";
+                    sidebar.style.right = w > 425 ? "-50%" : "-100%";
+                }
             }
         }
     }
@@ -69,12 +67,10 @@ export default function NavBar() {
                 <ul id={'topbar'} className={styles.topbar_links}>
                     {isLoading ?
                         <>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <li><span></span></li>
+                            <li><span></span></li>
+                            <li><span></span></li>
+                            <li><span></span></li>
                         </>
                         :
                         <>
@@ -89,7 +85,7 @@ export default function NavBar() {
                                     <li><button className={styles.logout_btn} onClick={() => { signOut(); toggleSideBar(); }}></button></li>
                                 </>
                                 :
-                                <li><button className={styles.login_btn} onClick={() => { router.push('/pages/login'); toggleSideBar(); }}>Login</button></li>
+                                <li ><button className={styles.login_btn} onClick={() => { router.push('/pages/login'); toggleSideBar(); }}>Login</button></li>
                             }
                         </>
                     }

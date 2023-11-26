@@ -1,9 +1,9 @@
 'use client';
 import styles from './styles/slideButton.module.css';
 
-export default function SlideButton() {
+export default function SlideButton({ direction }: { direction: string }) {
 
-    function slideShow(direction: string) {
+    function slideShow() {
         var slide = document.getElementById("slide_show");
 
         if (slide) {
@@ -18,14 +18,8 @@ export default function SlideButton() {
     }
 
     return (
-        <>
-            <button className={styles.slide} onClick={() => { slideShow("left"); }} title='slide left'>
-                <span className={`${styles.arrow} ${styles.left}`}></span>
-            </button>
-
-            <button className={styles.slide} onClick={() => { slideShow("right"); }} title='slide right' >
-                <span className={`${styles.arrow} ${styles.right}`}></span>
-            </button>
-        </>
+        <button className={styles.slide} onClick={slideShow} title='slide button'>
+            <span className={`${styles.arrow} ${direction === "left" ? styles.left : styles.right}`}></span>
+        </button>
     );
 }

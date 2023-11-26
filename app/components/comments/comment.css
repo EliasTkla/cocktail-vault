@@ -20,7 +20,7 @@
 }
 
 .comment-container h4, .reply-container h4 {
-    color: #DB8953;
+    color: #DAA657;
 }
 
 .comment-container p, .reply-container p {
@@ -34,7 +34,7 @@
     padding: 6px;
     background: rgba(219, 137, 83, .25);
     border: none;
-    color: #DB8953;
+    color: #DAA657;
     transition: .2s;
     cursor: pointer;
     user-select: none;

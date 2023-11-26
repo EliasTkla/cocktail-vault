@@ -1,8 +1,8 @@
 #navbar {
     width: 100%;
-    height: 75px;
+    height: 50px;
     top: 0;
-    position: relative;
+    position: absolute;
     z-index: 3;
 }
 
@@ -10,16 +10,8 @@
     width: 25rem;
     float: left;
     margin: 5px auto auto 50px;
-    transition: .3s;
+    transition: .4s;
     align-items: center;
-}
-
-.brand hr {
-    width: 70%;
-    margin: auto;
-    display: block;
-    border: 1px solid #DB8953;
-    opacity: 1;
 }
 
 .brand h1 {
@@ -28,12 +20,11 @@
     font-size: 1.75rem;
     font-weight: bolder;
     text-transform: uppercase;
-    color: #DB8953;
-    transition: .3s;
+    color: #DAA657;
 }
 
 .brand h1 span {
-    color: whitesmoke;
+    color: white;
 }
 
 .brand_img {
@@ -45,59 +36,79 @@
 
 .topbar_links {
     width: fit-content;
-    height: fit-content;
+    height: 100%;
     float: right;
     margin: 25px 50px auto auto;
     display: block;
 }
 
-.topbar-links span {
-    width: 50px;
-    height: 25px;
-    margin-left: 25px;
-    background-color: rgb(230, 230, 230);
-}
-
 .topbar_links li {
     width: fit-content;
-    height: max-content;
+    height: 100%;
     display: inline-block;
     vertical-align: middle;
+    margin: auto;
     margin-left: 50px;
     list-style-type: none;
     text-align: center;
     align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.topbar_links li:nth-of-type(-n+5) {
+    color: white;
 }
 
 .topbar_links a {
-    display: block;
-    padding-bottom: 5px;
-    border-bottom: 2px solid transparent;
+    width: 100%;
+    height: 100%;
     font-size: 1.25rem;
-    color: white;
-    transition: .2s;
-    cursor: pointer;
+    transition: .4s;
 }
 
-.topbar_links a:hover {
-    border-bottom: 2px solid #DB8953;
+.topbar_links li span {
+    width: 100px;
+    height: 25px;
+    display: block;
+    margin-top: 10px;
+    background-color: rgb(230, 230, 230, .25);
 }
 
 .login_btn {
-    padding: 10px;
-    padding-left: 45px;
-    padding-right: 45px;
-    border: 2px solid #DB8953;
+    width: 150px;
+    margin-top: -10px;
+    display: block;
+    position: relative;
+    padding: 10px 0 10px 0;
+    border: 2px solid #DAA657;
     font-size: 1.25rem;
-    color: #DB8953;
+    color: #DAA657;
     background-color: transparent;
     cursor: pointer;
-    transition: .3s;
+    transition: .4s;
+}
+
+.login_btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: #DAA657;
+    transform: scaleX(0);
+    transform-origin: 0;
+    transition: transform .4s ease-out;
+}
+
+.login_btn:hover::before {
+    transform: scaleX(1);
 }
 
 .login_btn:hover {
-    color: #181818;
-    background-color: #DB8953;
+    color: #1E1E1E;
 }
 
 .logout_btn {
@@ -106,16 +117,11 @@
     margin-left: -25px;
     border: none;
     display: block;
-    background: url("/static/images/logout.svg") no-repeat transparent center center;
-    border-left: 2px solid #DB8953;
+    border-left: 2px solid #DAA657;
     cursor: pointer;
     transition: .2s;
+    transform: perspective(1px) translateZ(0);
 }
-
-.logout_btn:hover {
-    background: url("/static/images/logout3.svg") no-repeat transparent center center;
-}
-
 
 .toggler {
     width: fit-content;
@@ -137,7 +143,7 @@
     margin: 6px auto;
     display: block;
     border-radius: 2px;
-    background-color: #DB8953;
+    background-color: #DAA657;
     transition: .2s;
 }
 
@@ -174,6 +180,28 @@
     .overlay {
         display: none;
     }
+
+    .topbar_links li:nth-of-type(-n+4) a:after {
+        width: 0;
+        height: 2px;
+        content: "";
+        margin-top: 10px;
+        display: block;
+        transition: width 0.4s ease 0s, left 0.4s ease 0s;
+        background: #DAA657;
+    }
+
+    .topbar_links li:nth-of-type(-n+4):hover a:after {
+        width: 100%;
+    }
+
+    .logout_btn {
+        background: url("/static/images/logout.svg") no-repeat transparent center center;
+    }
+
+    .logout_btn:hover {
+        background: url("/static/images/logout3.svg") no-repeat transparent center center;
+    }
 }
 
 @media (max-width: 1220px) {
@@ -196,38 +224,75 @@
         z-index: 3;
         overflow: hidden;
         padding: 150px 0 0 0;
-        background-color: #181818;
+        background-color: #1E1E1E;
         transition: .2s;
     }
 
     .topbar_links li {
         width: 100%;
-        height: 60px;
-        margin: 0;
+        height: fit-content;
+        margin: 10px auto;
         display: block;
     }
 
     .topbar_links a {
-        width: 80%;
-        margin: auto;
+        width: 150px;
         padding: 25px 0 25px 20%;
-        padding-top: 25px;
-        padding-bottom: 25px;
+        display: block;
+        position: relative;
         line-height: 50%;
         text-align: left;
-        color: #DB8953;
+        color: #DAA657;
     }
 
-    .topbar_links a:hover {
-        color: #181818;
-        background-color: #DB8953;
+    .topbar_links li:nth-of-type(-n+4) a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background: #DAA657;
+        transform: scaleX(0);
+        transform-origin: 0;
+        transition: transform .4s ease-out;
+    }
+
+    .topbar_links li:nth-of-type(-n+4) a:hover::before {
+        transform: scaleX(1);
+    }
+
+    .topbar_links li:nth-of-type(-n+4) a:hover {
+        color: #1E1E1E;
+    }
+
+    .topbar_links li span {
+        margin-left: 20%;
     }
 
     .login_btn {
-        height: 100%;
-        margin: 50px auto auto 20%;
+        width: 150px;
+        margin: 0;
+        padding: 20px 150px 20px 20%;
         float: left;
+        border: none;
         font-size: 1.25rem;
+    }
+
+    .logout_btn {
+        width: 150px;
+        height: auto;
+        margin: 0;
+        padding: 20px 150px 20px 20%;
+        display: block;
+        position: relative;
+        border: none;
+        color: #DAA657;
+        background-color: transparent;
+        background: none;
+        cursor: pointer;
+        transition: .4s;
     }
 
     .logout_btn::before {
@@ -235,23 +300,26 @@
         font-size: 1.25rem;
     }
 
-    .logout_btn {
-        width: 100%;
-        height: 100%;
-        float: right;
-        margin: 50px 0 0 0;
-        padding: 0;
-        padding-left: 20%;
-        border-left: none;
-        text-align: left;
-        background: none;
-        color: #DB8953;
+    .logout_btn::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background: #DAA657;
+        transform: scaleX(0);
+        transform-origin: 0;
+        transition: transform .4s ease-out;
+    }
+
+    .logout_btn:hover::after {
+        transform: scaleX(1);
     }
 
     .logout_btn:hover {
-        background: none;
-        color: #181818;
-        background-color: #DB8953;
+        color: #1E1E1E;
     }
 
     .toggler {
@@ -281,17 +349,5 @@
     .topbar_links {
         width: 100%;
         right: -100%;
-    }
-
-    .topbar_links a {
-        padding-left: 30%;
-    }
-
-    .login_btn {
-        margin: 50px auto auto 30%;
-    }
-
-    .logout_btn {
-        padding-left: 30%;
     }
 }

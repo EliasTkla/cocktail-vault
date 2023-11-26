@@ -1,135 +1,169 @@
-.intro_text {
-    width: 50%;
-    height: 50em;
-    margin: 100px auto auto 12%;
-    display: block;
+.home_container {
+    width: 100vw;
+    height: fit-content;
+    top: 0;
     position: relative;
-    z-index: 1;
-    transition: .2s;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 100vh;
+}
+
+.background {
+    width: 50vw;
+    height: 100vh;
+    display: block;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background: url('../public/static/images/home1.jpg') no-repeat transparent center center / cover;
+}
+
+.intro_text {
+    width: 40vw;
+    height: 50vh;
+    padding: 20vh 0vw 30vh 10vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: block;
+    background-color: #182C36;
 }
 
 .intro_text h1 {
-    font-size: 6rem;
+    font-size: 5rem;
     text-transform: uppercase;
     font-weight: bold;
-    color: white;
+    color: #DAA657;
     outline: none;
 }
 
 .intro_text p {
-    width: 70%;
+    width: 85%;
     font-size: 1.25rem;
     word-spacing: 5px;
     line-height: 135%;
-    color: lightgray;
+    color: white;
 }
 
 .popular_list {
     width: 80%;
     height: fit-content;
-    margin: auto;
-    display: block;
+    margin: 50px auto;
     position: relative;
     text-align: center;
     overflow: hidden;
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+    column-gap: 1%;
 }
 
 .popular_list h1 {
-    width: 60vw;
-    margin: 50px auto 50px auto;
-    text-transform: uppercase;
-    border-bottom: 2px solid #DB8953;
-    line-height: 0.1;
-    font-size: 2.5vw;
-    color: lightgray;
+    width: 100%;
+    margin: auto;
+    grid-area: 1 / 1 / span 1 / span 1;
+    text-transform: capitalize;
+    font-size: 2.25rem;
+    text-align: left;
+    color: #DAA657;
 }
 
 .popular_list h1 span {
     padding: 15px;
-    background-color: #181818;
 }
 
-.collection_link {
-    padding-bottom: 15px;
-    border-bottom: 2px solid #DB8953;
-    font-size: large;
-    color: #DB8953;
-    background-color: transparent;
-    transition: .2s;
-}
-
-.collection_link:hover {
-    padding-left: 15px;
-    padding-right: 15px;
+.popular_list a {
+    grid-area: 1 / 2 / span 1 / span 2;
+    margin: auto 5% auto auto;
+    text-align: right;
     color: white;
 }
 
+.popular_list a:hover {
+    color: #DAA657;
+}
+
+.popular_list a:after {
+    background: none repeat scroll 0 0 transparent;
+    content: "";
+    display: block;
+    height: 2px;
+    background: #fff;
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    width: 0;
+}
+
+.popular_list a:hover:after {
+    width: 100%;
+}
+
+.popular_list button {
+    margin: auto;
+}
+
+@media (max-width: 1440px) {
+    .intro_text h1 {
+        font-size: 3.75rem;
+    }
+}
 
 @media (max-width: 1024px) {
     .intro_text {
-        width: 60%;
-        margin: auto auto auto 5%;
+        padding: 15vh 0vw 35vh 10vw;
+        background-color: rgb(24, 43, 53, .75);
+        backdrop-filter: blur(50px);
     }
 
     .intro_text h1 {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 
     .intro_text p {
-        width: 80%;
-    }
-
-    .popular_list {
-        padding-top: 25px;
-    }
-
-    .popular_list h1 {
-        font-size: 3vw;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 768px) {
+    .background {
+        height: 100vh;
+        background: url('../public/static/images/home1.jpg') no-repeat transparent center center / cover;
+    }
+
     .intro_text {
-        width: 80%;
-        margin: 10vh auto auto 10%;
+        width: 100vw;
+        background-color: rgb(24, 43, 53, .75);
+        backdrop-filter: blur(5px);
     }
 
     .intro_text h1 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
-    .intro_text p {
-        width: 100%;
+    .popular_list {
+        width: 95%;
+        grid-template-columns: 100%;
     }
 
-    .popular_list h2 {
-        margin: 50px auto 50px auto;
-        font-size: 2rem;
+    .popular_list h1 {
+        grid-area: 1 / 1 / span 1 / span 2;
+    }
+
+    .popular_list button {
+        display: none;
     }
 }
 
 @media (max-width: 425px) {
-    .intro_text {
-        width: 90%;
-        height: 35em;
-        margin: 150px auto auto 10%;
-    }
-
     .intro_text h1 {
-        font-size: 2.5rem;
-    }
-
-    .intro_text p {
-        width: 90%;
-        font-size: 1rem;
+        font-size: 10vw;
     }
 
     .popular_list {
-        margin: auto auto 50px auto;
+        width: 100%;
     }
 
-    .popular_list h2 {
-        margin: auto auto 50px auto;
-        font-size: 1.5rem;
+    .popular_list h1 {
+        margin-left: 5%;
     }
 }

@@ -3,15 +3,11 @@
     height: 50px;
     margin: 25px;
     position: relative;
-    border: 2px solid #DB8953;
+    border: none;
     border-radius: 50%;
     background-color: transparent;
     cursor: pointer;
     transition: .2s;
-}
-
-.slide:hover {
-    border-color: white;
 }
 
 .slide:hover .arrow {
@@ -19,7 +15,7 @@
 }
 
 .arrow {
-    border: solid #DB8953;
+    border: solid #DAA657;
     border-width: 0 4px 4px 0;
     display: inline-block;
     padding: 6px;
