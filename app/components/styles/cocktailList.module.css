@@ -22,6 +22,7 @@
 }
 
 .card_spacing {
+    width: 250px;
     margin: 20px;
 }
 
@@ -30,7 +31,7 @@
     min-height: 30vh;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 24%);
+    grid-template-columns: repeat(4, 24%);
     row-gap: 25px;
     justify-content: space-evenly;
 }
@@ -58,7 +59,7 @@
     margin: auto;
     padding: 10px;
     text-align: center;
-    color: #DB8953;
+    color: #DAA657;
 }
 
 .error_message h3 {
@@ -68,19 +69,24 @@
 .placeholder {
     height: 20vh;
     margin: auto;
-    color: #DB8953;
+    color: #DAA657;
 }
 
 @media (max-width: 1440px) {
     .fave_results {
         grid-template-columns: repeat(3, 30%);
-        column-gap: 3%;
     }
 }
 
 @media (max-width: 1024px) {
     .results {
         grid-template-columns: repeat(3, 32%);
+    }
+}
+
+@media (max-width: 768px) {
+    .card_spacing {
+        width: 200px;
     }
 }
 

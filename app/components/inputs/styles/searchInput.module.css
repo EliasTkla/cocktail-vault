@@ -15,8 +15,8 @@
 }
 
 .searchbar:focus {
-    border: 2px solid #DB8953;
-    outline: #DB8953;
+    border: 2px solid #DAA657;
+    outline: #DAA657;
 }
 
 .clear_btn {
@@ -28,7 +28,7 @@
     border: none;
     border-radius: 50%;
     font-size: large;
-    color: #DB8953;
+    color: #DAA657;
     background-color: transparent;
     cursor: pointer;
 }

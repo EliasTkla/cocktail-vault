@@ -67,7 +67,7 @@ export default function Login() {
             {status == 'unauthenticated' ?
                 <div className={styles.form_container}>
                     <form className={styles.login_form} autoComplete='off' onSubmit={(e) => { verifyInput(e) }}>
-                        <h1>Welcome back!</h1>
+                        <h1>Login</h1>
                         {verificationError &&
                             <p className={styles.verification_error}>{verificationError}</p>
                         }

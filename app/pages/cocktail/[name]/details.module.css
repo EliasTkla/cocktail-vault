@@ -1,7 +1,7 @@
 .details_container {
     width: fit-content;
     height: fit-content;
-    margin: 100px auto;
+    margin: 175px auto;
     display: grid;
     grid-template-columns: repeat(2, auto);
     column-gap: 50px;
@@ -27,7 +27,7 @@
     font-weight: bolder;
     font-size: 2rem;
     color: black;
-    background-color: #DB8953;
+    background-color: #DAA657;
 }
 
 .container {
@@ -40,7 +40,7 @@
 }
 
 .container h3 {
-    color: #DB8953;
+    color: #DAA657;
 }
 
 .container span {
@@ -65,7 +65,7 @@
 }
 
 .instructions_container h3 {
-    color: #DB8953;
+    color: #DAA657;
 }
 
 .instructions_container li {

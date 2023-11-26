@@ -7,29 +7,28 @@ footer {
     left: 0;
     right: 0;
     text-align: center;
-    background: rgba(219, 137, 83, .85);
+    background: #182C36;
 }
 
 footer a {
-    color: #181818;
+    color: lightgray;
     padding: 25px;
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-align: center;
 }
 
 footer a:hover {
-    color: white;
+    color: #DAA657;
 }
 
 @media (max-width: 500px) {
     footer a {
         padding: 12.5px;
-        font-size: small;
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 320px) {
     footer {
         padding-top: 15px;
         padding-bottom: 15px;

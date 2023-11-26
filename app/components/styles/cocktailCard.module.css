@@ -3,6 +3,7 @@
     aspect-ratio: 3 / 5;
     display: inline-block;
     position: relative;
+    overflow: hidden;
     text-align: center;
     cursor: pointer;
     transition: .3s;
@@ -20,7 +21,7 @@
     overflow: hidden;
     transition: .3s;
     text-align: center;
-    filter: brightness(75%);
+    filter: brightness(80%);
 }
 
 .container:hover img {
@@ -41,7 +42,8 @@
     text-align: center;
     text-transform: uppercase;
     color: white;
-    background-image: linear-gradient(to top, #181818, rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to top, #1E1E1E, rgba(0, 0, 0, 0));
+    transition: .4s;
 }
 
 .drink_text span {
@@ -56,42 +58,44 @@
     align-self: flex-end;
     text-wrap: wrap;
     white-space: normal;
-    font-size: 1vw;
+    font-size: 1.35em;
     font-weight: normal;
+    transition: .6s;
 }
 
 .drink_text h4 {
-    font-size: 1.5vw;
+    font-size: 1.35em;
     font-weight: normal;
-    color: #DB8953;
+    color: #DAA657;
+    transition: .8s;
 }
 
 @media (max-width: 1024px) {
     .drink_text h3 {
-        font-size: 1.75vw;
+        font-size: 1.1em;
     }
 
     .drink_text h4 {
-        font-size: 1.75vw;
+        font-size: 1.1em;
     }
 }
 
 @media (max-width: 768px) {
     .drink_text h3 {
-        font-size: 2.5vw;
+        font-size: .85em;
     }
 
     .drink_text h4 {
-        font-size: 2.5vw;
+        font-size: .85em;
     }
 }
 
 @media (max-width: 425px) {
     .drink_text h3 {
-        font-size: 3.5vw;
+        font-size: .75em;
     }
 
     .drink_text h4 {
-        font-size: 3.5vw;
+        font-size: .75em;
     }
 }

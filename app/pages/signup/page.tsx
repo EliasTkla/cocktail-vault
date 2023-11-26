@@ -77,7 +77,7 @@ export default function SignUp() {
             {(status == 'unauthenticated') ?
                 <div className={styles.form_container}>
                     <form className={styles.signup_form} autoComplete='off' onSubmit={(e) => { verifyInput(e) }}>
-                        <h1>Create an account</h1>
+                        <h1>Sign Up</h1>
                         {verificationError.value &&
                             <p className={styles.verification_error}>{verificationError.message}</p>
                         }
