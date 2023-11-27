@@ -6,8 +6,7 @@
     overflow: hidden;
     text-align: center;
     cursor: pointer;
-    transition: .3s;
-    box-shadow: rgba(255, 255, 255, 0.02) 0px 1px 3px 0px, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px;
+    transition: .4s;
 }
 
 .container_spacing {
@@ -19,9 +18,16 @@
     height: 100%;
     display: block;
     overflow: hidden;
-    transition: .3s;
+    transition: .4s;
     text-align: center;
     filter: brightness(80%);
+}
+
+.image_wrapper img {
+    width: auto;
+    height: 115%;
+    margin: auto auto auto -25%;
+    transition: .4s;
 }
 
 .container:hover img {
@@ -34,68 +40,68 @@
 
 .drink_text {
     width: 100%;
+    height: 25%;
     left: 0;
-    right: 0;
     bottom: 0;
     position: absolute;
     z-index: 0;
+    padding-top: 5%;
     text-align: center;
-    text-transform: uppercase;
-    color: white;
-    background-image: linear-gradient(to top, #1E1E1E, rgba(0, 0, 0, 0));
+    text-transform: capitalize;
+    background-image: linear-gradient(to top, #182C36, rgba(0, 0, 0, 0));
     transition: .4s;
 }
 
-.drink_text span {
-    display: flex;
-}
-
 .drink_text h3 {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 90%;
+    height: 50%;
+    margin: auto auto 0 auto;
     display: block;
-    align-self: flex-end;
     text-wrap: wrap;
     white-space: normal;
-    font-size: 1.35em;
+    font-size: 1.25vw;
     font-weight: normal;
     transition: .6s;
+    color: #E8DDD4;
 }
 
-.drink_text h4 {
-    font-size: 1.35em;
+.container h4 {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 5% 0 5% 0;
+    font-size: 1.25vw;
     font-weight: normal;
-    color: #DAA657;
     transition: .8s;
+    color: #DAA657;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
     .drink_text h3 {
-        font-size: 1.1em;
+        font-size: 1.5vw;
     }
 
     .drink_text h4 {
-        font-size: 1.1em;
+        font-size: 1.5vw;
     }
 }
 
 @media (max-width: 768px) {
     .drink_text h3 {
-        font-size: .85em;
+        font-size: 2.15vw;
     }
 
     .drink_text h4 {
-        font-size: .85em;
+        font-size: 2.15vw;
     }
 }
 
 @media (max-width: 425px) {
     .drink_text h3 {
-        font-size: .75em;
+        font-size: 3vw;
     }
 
     .drink_text h4 {
-        font-size: .75em;
+        font-size: 3vw;
     }
 }

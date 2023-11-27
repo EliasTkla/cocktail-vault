@@ -32,8 +32,6 @@ export default async function CocktailList({ page, query, per_load }: { page: st
         list = cocktails;
     }
 
-    list = cocktails;
-
     if (query) {
         list = list.filter(item => item.difficulty.toLowerCase().includes(query.toLowerCase()) || item.title.toLowerCase().includes(query.toLowerCase()));
     }

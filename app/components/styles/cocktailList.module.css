@@ -73,20 +73,19 @@
 }
 
 @media (max-width: 1440px) {
+    .results {
+        grid-template-columns: repeat(3, 32%);
+    }
+
     .fave_results {
         grid-template-columns: repeat(3, 30%);
     }
 }
 
-@media (max-width: 1024px) {
-    .results {
-        grid-template-columns: repeat(3, 32%);
-    }
-}
-
 @media (max-width: 768px) {
     .card_spacing {
-        width: 200px;
+        width: 175px;
+        margin: 10px;
     }
 }
 
@@ -101,5 +100,10 @@
         grid-template-columns: repeat(2, 48%);
         column-gap: 4%;
         row-gap: 10px;
+    }
+
+    .card_spacing {
+        width: 150px;
+        margin: 5px;
     }
 }

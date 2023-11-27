@@ -33,13 +33,12 @@
 
 .learn_button:hover {
     color: #DAA657;
-    /* background: #182C36; */
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
     .learn_button {
-        width: 50vw;
-        height: 4rem;
+        width: 40vw;
+        height: 3.5rem;
         font-size: 1rem;
     }
 }
