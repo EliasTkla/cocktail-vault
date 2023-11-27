@@ -14,16 +14,12 @@ export default function CocktailCard({ id, title, image, difficulty }: Cocktail)
                         width={0}
                         height={0}
                         sizes="100vw"
-                        style={{ width: "auto", height: "115%", transition: ".3s", marginLeft: "-25%", objectFit: "cover" }}
                         priority={true}
                     />
                 </div>
 
                 <div className={styles.drink_text}>
-                    <span>
-                        <h3>{title}</h3>
-                    </span>
-
+                    <h3>{title}</h3>
                     <h4>{difficulty}</h4>
                 </div>
             </Link>
