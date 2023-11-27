@@ -11,7 +11,7 @@ export default function SignUp() {
     const router = useRouter();
     const usernameRegex = new RegExp(/^[a-zA-Z0-9]{3,15}$/)
     const emailRegex = new RegExp(/^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/);
-    const passwordRegex = new RegExp(/^[a-zA-Z0-9]{8,20}$/);
+    const passwordRegex = new RegExp(/^[a-zA-Z0-9]{8,35}$/);
     const [user, setUser] = useState({ username: "", email: "", password: "" })
     const [verificationError, setVerificationError] = useState({ value: false, message: "" });
     const [usernameError, setUsernameError] = useState(false);
@@ -94,7 +94,7 @@ export default function SignUp() {
 
                         <input id={styles.user_pwd} type='password' name='password' placeholder='Password' onChange={(e) => { inputChange(e) }} autoComplete='off' />
                         {passwordError &&
-                            <p className={styles.error_message}>must be 8-20 characters</p>
+                            <p className={styles.error_message}>must be 8 to 35 characters</p>
                         }
 
                         <button type='submit'>SIGN UP</button>
