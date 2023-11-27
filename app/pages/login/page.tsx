@@ -42,12 +42,6 @@ export default function Login() {
     function verifyInput(e: any) {
         e.preventDefault();
 
-        if (!emailRegex.test(user.email)) {
-            setVerificationError("invalid email");
-        } else if (!passwordRegex.test(user.password)) {
-            setVerificationError("password must be 8-20 characters");
-        }
-
         if (emailRegex.test(user.email) && passwordRegex.test(user.password)) {
             setVerificationError("");
 
