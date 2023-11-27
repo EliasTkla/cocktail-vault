@@ -3,17 +3,35 @@
     height: 50px;
     margin: 100px auto;
     display: block;
+    position: relative;
     border: 2px solid #DAA657;
     text-transform: uppercase;
     color: #1E1E1E;
-    background-color: #DAA657;
+    background-color: transparent;
     cursor: pointer;
     transition: .2s;
 }
 
+.load_btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: #DAA657;
+    transform: scaleX(1);
+    transform-origin: 100%;
+    transition: transform .4s ease-out;
+}
+
+.load_btn:hover::before {
+    transform: scaleX(0);
+}
+
 .load_btn:hover {
     color: #DAA657;
-    background-color: transparent;
 }
 
 .hide_btn {
