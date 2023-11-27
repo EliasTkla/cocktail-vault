@@ -10,7 +10,7 @@ export default function Login() {
     const { status } = useSession();
     const router = useRouter();
     const emailRegex = new RegExp(/^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/);
-    const passwordRegex = new RegExp(/^[a-zA-Z0-9]{8,}$/);
+    const passwordRegex = new RegExp(/^[a-zA-Z0-9]{8,35}$/);
     const [user, setUser] = useState({ email: "", password: "" })
     const [verificationError, setVerificationError] = useState("");
 
