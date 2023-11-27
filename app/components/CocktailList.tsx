@@ -15,13 +15,13 @@ export default async function CocktailList({ page, query, per_load }: { page: st
     let list: Cocktail[] = [];
 
     if (page == "favourites") {
-        if (favourites == "empty") {
+        if (favourites === "empty") {
             return (
                 <div className={styles.placeholder}>
                     <h2>You haven't saved any cocktails yet!</h2>
                 </div>
             )
-        } else if (favourites == "error") {
+        } else if (favourites === "error") {
             return (
                 <ErrorMessage />
             )
@@ -45,7 +45,7 @@ export default async function CocktailList({ page, query, per_load }: { page: st
                         <div id="slide_show" className={page == "home" ? styles.home_slide : (page == "favourites" ? styles.fave_results : styles.results)}>
                             {page == "home" ?
                                 <>
-                                    {cocktails.slice(50, 70).map((item: Cocktail) => {
+                                    {list.slice(50, 70).map((item: Cocktail) => {
                                         return (
                                             <div key={item.id} className={styles.card_spacing}>
                                                 <CocktailCard {...item} />
