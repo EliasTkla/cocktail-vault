@@ -215,8 +215,8 @@
     }
 
     .cocktail_facts {
-        width: 90vw;
-        margin: -25px auto 25px auto;
+        width: 80vw;
+        margin: -50px auto 25px auto;
         display: grid;
         grid-template-columns: 100%;
     }
@@ -227,11 +227,11 @@
     }
 
     .cocktail_facts div:nth-child(2) {
-        width: 80%;
+        width: 100%;
     }
 
     .cocktail_facts div:nth-child(3) {
-        width: 80%;
+        width: 100%;
     }
 
     .cocktail_facts div:last-of-type {
@@ -262,6 +262,10 @@
     .intro_text p {
         width: 100%;
         font-size: 1rem;
+    }
+
+    .cocktail_facts {
+        width: 90vw;
     }
 
     .cocktail_facts h3 {

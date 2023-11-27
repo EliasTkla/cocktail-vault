@@ -58,6 +58,7 @@
     margin: auto auto 0 auto;
     display: block;
     text-wrap: wrap;
+    overflow: hidden;
     white-space: normal;
     font-size: 1.25vw;
     font-weight: normal;
