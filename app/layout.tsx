@@ -14,22 +14,19 @@ export const metadata: Metadata = {
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-    // return (
-    //     <html lang="en">
-    //         <body>
-    //             <AuthProvider>
-    //                 <NavBar />
-    //                 <main>
-    //                     {children}
-    //                 </main>
-    //                 <Footer />
-    //             </AuthProvider>
-    //             <Analytics />
-    //         </body>
-    //     </html>
-    // )
-
     return (
-        <div>Under Maintenance</div>
+        <html lang="en">
+            <body>
+                <div>Under Maintenance</div>
+                {/* <AuthProvider>
+                    <NavBar />
+                    <main>
+                        {children}
+                    </main>
+                    <Footer />
+                </AuthProvider>
+                <Analytics /> */}
+            </body>
+        </html>
     )
 }
