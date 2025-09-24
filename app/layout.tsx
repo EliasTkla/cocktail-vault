@@ -17,7 +17,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     return (
         <html lang="en">
             <body>
-                <div>Under Maintenance</div>
+                <h1>Under Maintenance</h1>
                 {/* <AuthProvider>
                     <NavBar />
                     <main>
